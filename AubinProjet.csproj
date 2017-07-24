@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BFD9C01D-B71A-4483-9147-229B29E59575}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Fr.Afcepf.Anarmorique.Aubin</RootNamespace>
+    <AssemblyName>AubinProjet</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommandeConsommateurDataSet.cs">
+      <DependentUpon>CommandeConsommateurDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommandeConsommateurDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CommandeConsommateurDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="UC\BarreChoixCompteClient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\BarreChoixCompteClient.Designer.cs">
+      <DependentUpon>BarreChoixCompteClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\BarreChoixCompteProducteur.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\BarreChoixCompteProducteur.Designer.cs">
+      <DependentUpon>BarreChoixCompteProducteur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\CommandeAPreparerUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\CommandeAPreparerUC.Designer.cs">
+      <DependentUpon>CommandeAPreparerUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\CommandeConsommateurUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\CommandeConsommateurUC.Designer.cs">
+      <DependentUpon>CommandeConsommateurUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\CompteConsommateurUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\CompteConsommateurUC.Designer.cs">
+      <DependentUpon>CompteConsommateurUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\CompteProducteur.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\CompteProducteur.Designer.cs">
+      <DependentUpon>CompteProducteur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\LigneProduitUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\LigneProduitUC.Designer.cs">
+      <DependentUpon>LigneProduitUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\PrepCommandeUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\PrepCommandeUC.Designer.cs">
+      <DependentUpon>PrepCommandeUC.cs</DependentUpon>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Commun\Commun.csproj">
+      <Project>{F958C72E-CF03-4D8F-94A7-E161E2C9E9D1}</Project>
+      <Name>Commun</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\BarreChoixCompteClient.resx">
+      <DependentUpon>BarreChoixCompteClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\BarreChoixCompteProducteur.resx">
+      <DependentUpon>BarreChoixCompteProducteur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\CommandeAPreparerUC.resx">
+      <DependentUpon>CommandeAPreparerUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\CommandeConsommateurUC.resx">
+      <DependentUpon>CommandeConsommateurUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\CompteConsommateurUC.resx">
+      <DependentUpon>CompteConsommateurUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\CompteProducteur.resx">
+      <DependentUpon>CompteProducteur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\LigneProduitUC.resx">
+      <DependentUpon>LigneProduitUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\PrepCommandeUC.resx">
+      <DependentUpon>PrepCommandeUC.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="CommandeConsommateurDataSet.xsc">
+      <DependentUpon>CommandeConsommateurDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CommandeConsommateurDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CommandeConsommateurDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="CommandeConsommateurDataSet.xss">
+      <DependentUpon>CommandeConsommateurDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit%284%29.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
